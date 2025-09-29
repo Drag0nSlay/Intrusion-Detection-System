@@ -9,14 +9,12 @@ IDS/
 │
 ├── suricata-pi/                 # IDS side (Pi par run hoga)
 │   ├── forwarder.py             # Script: eve.json → Flask ingest API
-│   ├── local.rules              # Custom Suricata rules
-│   └── README.md                # How to run Suricata + forwarder
+│   └── local.rules              # Custom Suricata rules
 │
 ├── frontend/
 │   ├── index.html
 │   ├── static/
-│   │   └── script.js            # Fetch alerts from API
-│   └── README.md
+│   └── script.js            # Fetch alerts from API
 │
 ├── docs/
 │   ├── Report.docx
