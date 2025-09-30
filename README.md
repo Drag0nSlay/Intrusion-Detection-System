@@ -135,4 +135,5 @@ Backend runs at → http://localhost:5000
 - [ ] Raspberry Pi integration with Suricata
 <!-- [] Advanced ML-based detection -->
 
+This project is licensed under the [MIT License](https://github.com/Drag0nSlay/Intrusion-Detection-System?tab=MIT-1-ov-file).
 <p align="center">💡 Built with teamwork, cybersecurity passion, and lots of ☕</p> ```
