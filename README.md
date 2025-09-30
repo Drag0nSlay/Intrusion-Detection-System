@@ -36,7 +36,7 @@ The system uses **Suricata IDS** to detect suspicious traffic and forwards alert
 ```
 IDS/
 │
-├── backend/
+├── Backend/
 │   ├── app.py
 │   ├── database.py
 │   ├── requirements.txt
@@ -74,7 +74,7 @@ IDS/
 ### 1️⃣ Clone Repository
 ```bash
 git clone https://github.com/Drag0nSlay/Intrusion-Detection-System.git
-cd Intrusion-Detection-System/backend
+cd Intrusion-Detection-System/Backend
 ```
 
 ### 2️⃣ Install Dependencies
