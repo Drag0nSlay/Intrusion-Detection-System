@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/banner.png" alt="IDS Banner" width="800" height=800/>
+  <img src="docs/banner.png" alt="IDS Banner" width="800" height=400/>
 </p>
 
 <h1 align="center">🔐 IoT Intrusion Detection System (IDS)</h1>
