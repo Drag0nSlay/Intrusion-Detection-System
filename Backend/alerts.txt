@@ -1,0 +1,9 @@
+CREATE TABLE Alerts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp TEXT,
+    src_ip TEXT,
+    dest_ip TEXT,
+    proto TEXT,
+    signature TEXT,
+    severity INTEGER
+);
