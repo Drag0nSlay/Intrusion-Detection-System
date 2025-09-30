@@ -47,7 +47,7 @@ IDS/
 │   ├── forwarder.py             # Script: eve.json → Flask ingest API
 │   └── local.rules              # Custom Suricata rules
 │
-├── frontend/
+├── frontend/                    # (optional may be we use react)
 │   ├── index.html
 │   ├── static/
 │   └── script.js            # Fetch alerts from API
