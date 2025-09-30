@@ -120,6 +120,7 @@ Backend runs at → http://localhost:5000
 - SQLite
 - Suricata IDS
 - Raspberry Pi 3 or 4
+- Requests (for alert forwarding)
 
 ## 👥 Team Roles
 
