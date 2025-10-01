@@ -35,7 +35,7 @@
 - [Tech Stack](#-tech-stack)
 - [Team Roles](#-team-roles)
 - [Roadmap](#-roadmap)
-- [License](#license)
+- [License](https://github.com/Drag0nSlay/Intrusion-Detection-System?tab=MIT-1-ov-file)
 ---
 
 ## 🚀 Overview
