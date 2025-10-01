@@ -87,3 +87,74 @@ The system consists of multiple components working together to detect suspicious
 
 - Port mirroring (optional)
   - If you have a managed switch that supports SPAN, mirror IoT VLAN to Pi to capture all device traffic without bridging.
+ 
+## 6️⃣ Key configuration snippets
+**Suricata rule (detect SYN‑scan / portscan)**
+
+Add to /etc/suricata/rules/local.rules:
+```bash
+alert tcp any any -> any any (msg:"POTENTIAL PORTSCAN - SYN flood/scan"; flags:S; threshold:type both, track by_src, count 20, seconds 60; sid:1000002; rev:1;)
+```
+- Adjust ```count```/```seconds``` for sensitivity in lab.
+
+**forwarder.py (tail + POST)**
+
+Simple behaviour: open ```/var/log/suricata/eve.json```, read lines, POST alerts to backend ```/ingest```. If backend is on laptop replace ```127.0.0.1``` with laptop IP.
+
+<h3> Flask API (endpoints) </h3>
+
+- ```POST /ingest``` — receive JSON alert; insert into ```Alerts``` table.
+- ```GET /alerts``` — return recent ```n``` alerts as JSON.
+
+## 7️⃣ Ports & firewall
+
+- **Suricata:** passive — no ports required.
+- **Flask backend:** default ```5000``` (HTTP). Ensure backend host firewall allows inbound TCP ```5000``` from Pi.
+- **nmap:** scans target ports (e.g., 22,80,443); ensure you run scans only on allowed hosts.
+
+## 8️⃣ Monitoring & logs
+
+- **Suricata log:** ```/var/log/suricata/eve.json``` (JSON lines) and ```/var/log/suricata/fast.log``` (human readable).
+- **Flask logs:** console/stdout or systemd journal if deployed as a service.
+- **SQLite DB:** ```alerts.db``` — inspect via ```sqlite3``` or DB Browser.
+
+## 9️⃣ Testing procedure (demo checklist)
+
+1. Ensure backend running: ```python app.py``` → accessible at ```http://<backend-ip>:5000```.
+2. Ensure Suricata running on Pi and ```local.rules``` includes the portscan rule.
+3. Start forwarder on Pi (set backend IP if needed).
+4. From attacker laptop run:
+```bash
+nmap -sS -Pn -p- <target-ip>
+```
+5. On Pi tail ```eve.json``` to observe alerts:
+```bash
+sudo tail -f /var/log/suricata/eve.json
+```
+6. Check backend API for stored alerts:
+```bash
+curl http://<backend-ip>:5000/alerts
+```
+7. Open frontend dashboard and capture screenshots for report.
+
+## 🔟 Security & ethics
+
+- Only run ```nmap``` and IDS tests on hosts you own or have explicit permission to test.
+- Secure ```/ingest``` in future (API key or token) to avoid unauthorized posts to your backend.
+- Protect ```alerts.db``` (permissions) and do not commit it to GitHub.
+
+## 11. Scalability & future work
+
+- Replace SQLite with PostgreSQL/MySQL for multi-node ingestion.
+- Add authentication (API key/JWT) to ```/ingest```.
+- Use message queue (RabbitMQ / Kafka) between forwarder and backend for resilience.
+- Add WebSocket endpoint for real‑time dashboard updates.
+
+## 12. Appendix — quick network diagram (ASCII)
+```bash
+[Attacker laptop (nmap)] --> [Router/Switch] --> [Target host(s)]
+                                 |
+                                 +--> [Raspberry Pi running Suricata + forwarder]
+                                 |
+                                 +--> [Backend (Flask) on laptop or server]
+```
