@@ -25,6 +25,18 @@
 </p>
 
 ---
+## 📑 Table of Contents
+- [Overview](#-overview)
+- [Project Structure](#-project-structure)
+- [Documentation](#-documentation)
+- [Setup](#-setup-backend)
+- [API Endpoints](#-api-endpoints)
+- [Demo Output](#-demo-output)
+- [Tech Stack](#-tech-stack)
+- [Team Roles](#-team-roles)
+- [Roadmap](#-roadmap)
+- [License](#license)
+---
 
 ## 🚀 Overview
 This project implements a **backend + IDS integration** for monitoring IoT traffic using Raspberry Pi.  
@@ -66,8 +78,14 @@ IDS/
 │
 └── README.md
 ```
+---
+
+## 📖 Documentation
+- 📐 [System Architecture](docs/architecture.md)
+- 📑 [User Manual](docs/user_manual.md)
 
 ---
+
 
 ## ⚙️ Setup (Backend)
 
