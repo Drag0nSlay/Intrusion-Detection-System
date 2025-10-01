@@ -29,7 +29,7 @@
 - [Overview](#-overview)
 - [Project Structure](#-project-structure)
 - [Documentation](#-documentation)
-- [Setup](#-setup-backend)
+- [Setup](#%EF%B8%8F-setup-backend)
 - [API Endpoints](#-api-endpoints)
 - [Demo Output](#-demo-output)
 - [Tech Stack](#-tech-stack)
