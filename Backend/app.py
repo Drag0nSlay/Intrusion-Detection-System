@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from Backend import database
+import database
 
 app = Flask(__name__)
 
@@ -18,4 +18,5 @@ def ingest_alert():
 if __name__ == "__main__":
 
     app.run(host="0.0.0.0", port=5000)
+
 
