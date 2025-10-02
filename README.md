@@ -25,6 +25,8 @@
   <a href="https://github.com/Drag0nSlay/Intrusion-Detection-System/actions/workflows/pylint.yml">
   <img src="https://github.com/Drag0nSlay/Intrusion-Detection-System/actions/workflows/pylint.yml/badge.svg" alt="Pylint">
 </a>
+  <img src="https://img.shields.io/badge/dependabot-active-brightgreen?style=flat-square&logo=dependabot" />
+
 </p>
 
 ---
