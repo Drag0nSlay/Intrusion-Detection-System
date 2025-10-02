@@ -22,6 +22,9 @@
   <img src="https://img.shields.io/badge/sqlite-DB-orange?logo=sqlite" />
   <img src="https://img.shields.io/badge/status-in%20progress-yellow" />
   <img src="https://img.shields.io/badge/license-MIT-green" />
+  <a href="https://github.com/Drag0nSlay/Intrusion-Detection-System/actions/workflows/pylint.yml">
+  <img src="https://github.com/Drag0nSlay/Intrusion-Detection-System/actions/workflows/pylint.yml/badge.svg" alt="Pylint">
+</a>
 </p>
 
 ---
