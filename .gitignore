@@ -13,3 +13,7 @@ Thumbs.db
 # IDE / editor settings
 .vscode/
 *.swp
+
+.env
+logs/
+*.db
