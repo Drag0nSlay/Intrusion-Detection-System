@@ -6,7 +6,7 @@ import sqlite3
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from flask import Flask, request, jsonify
-from Backend.database import insert_alert
+from database import insert_alert
 from utils.auth import require_api_key
 from utils.validator import validate_alert_data
 from utils.logger import log_info, log_error
