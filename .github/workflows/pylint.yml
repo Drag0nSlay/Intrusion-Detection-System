@@ -19,6 +19,8 @@ jobs:
           pip install pylint
           if [ -f Backend/requirements.txt ]; then pip install -r Backend/requirements.txt; fi
 
-      - name: Analysing the code with pylint (errors only)
+      - name: Run Pylint
         run: |
-          PYTHONPATH=Backend pylint --errors-only Backend
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/Backend:$(pwd)
+          pylint --errors-only Backend/*.py utils/*.py
+
