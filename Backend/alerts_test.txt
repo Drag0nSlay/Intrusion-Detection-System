@@ -1,0 +1,8 @@
+"id"	INTEGER,
+	"timestamp"	TEXT,
+	"src_ip"	TEXT,
+	"dest_ip"	TEXT,
+	"proto"	TEXT,
+	"signature"	TEXT,
+	"severity"	INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT)
