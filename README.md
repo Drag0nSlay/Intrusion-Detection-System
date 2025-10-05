@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="docs/Screenshots/banner.png" alt="IDS Banner" width="800" height=400/>
+  <img src="docs/banner.png" alt="IDS Banner" width="800" height=400/>
 </p>
 
 <h1 align="center">🔐 IoT Intrusion Detection System (IDS)</h1>
 
 <p align="center">
-  <img src="docs/Screenshots/logo.png" alt="IDS Logo" width="120"/>
+  <img src="docs/logo.png" alt="IDS Logo" width="120"/>
 </p>
 
 <p align="center">
@@ -135,7 +135,7 @@ Backend runs at → http://localhost:5000
 ---
 
 ## 📊 Demo Output
-<p align="center"> <img src="docs/Screenshots/demo-dashboard.png" alt="Dashboard Example" width="700"/> </p>
+<p align="center"> <img src="docs/demo-dashboard.png" alt="Dashboard Example" width="700"/> </p>
 
 ## 🛠 Tech Stack
 - Python 3.12
@@ -160,5 +160,4 @@ Backend runs at → http://localhost:5000
 <!-- [] Advanced ML-based detection -->
 
 This project is licensed under the [MIT License](https://github.com/Drag0nSlay/Intrusion-Detection-System?tab=MIT-1-ov-file).
-
 <p align="center">💡 Built with teamwork, cybersecurity passion, and lots of ☕</p> ```
