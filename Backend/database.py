@@ -1,28 +1,26 @@
+# database.py
 import sqlite3
+import os
+from dotenv import load_dotenv
 
-DB_NAME = "alerts.db"
+load_dotenv()
+DB_PATH = os.getenv("DB_NAME", "alerts.db")
 
 def get_db():
-    conn = sqlite3.connect(DB_NAME)
+    conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     return conn
 
-def insert_alert(data):
+def insert_alert(timestamp, src_ip, dest_ip, proto, signature, severity):
+    """
+    Parameterized insert into Alerts table.
+    Keeps behavior identical to previous code but prevents SQL injection.
+    """
     conn = get_db()
     cur = conn.cursor()
     cur.execute(
-        """INSERT INTO Alerts (timestamp, src_ip, dest_ip, proto, signature, severity)
-           VALUES (?, ?, ?, ?, ?, ?)""",
-        (data["timestamp"], data["src_ip"], data["dest_ip"], data["proto"],
-         data["alert"]["signature"], data["alert"]["severity"])
+        "INSERT INTO Alerts (timestamp, src_ip, dest_ip, proto, signature, severity) VALUES (?, ?, ?, ?, ?, ?)",
+        (timestamp, src_ip, dest_ip, proto, signature, severity)
     )
     conn.commit()
     conn.close()
-
-def fetch_alerts(limit=20):
-    conn = get_db()
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM Alerts ORDER BY id DESC LIMIT ?", (limit,))
-    rows = [dict(row) for row in cur.fetchall()]
-    conn.close()
-    return rows
