@@ -2,14 +2,14 @@
   <img src="docs/Screenshots/banner.png" alt="IDS Banner" width="800" height=400/>
 </p>
 
-<h1 align="center">🔐 IoT Intrusion Detection System (IDS)</h1>
+<h1 align="center">🛡️ Hybrid Intrusion Detection System (H-IDS)</h1>
 
 <p align="center">
   <img src="docs/Screenshots/logo.png" alt="IDS Logo" width="120"/>
 </p>
 
 <p align="center">
-  <b>Raspberry Pi–based Intrusion Detection System for IoT Networks</b>  
+  <b>Raspberry Pi–based Hybrid Intrusion Detection System for IoT & Network Environments</b>  
   <br/>A collaborative project by 4 team members  
 </p>
 
@@ -44,9 +44,12 @@
 ---
 
 ## 🚀 Overview
-This project implements a **backend + IDS integration** for monitoring IoT traffic using Raspberry Pi.  
-The system uses **Suricata IDS** to detect suspicious traffic and forwards alerts to a **Flask + SQLite backend**, which powers a web dashboard.
+This project implements a **Hybrid Intrusion Detection System (H-IDS)** that combines **IoT-based hardware detection (Raspberry Pi)** and **software-based network monitoring (Flask + SQLite backend)**.
 
+The Raspberry Pi runs **Suricata IDS**, acting as a **lightweight IoT security node** that monitors local network traffic and detects potential intrusions in real time.  
+Detected alerts are securely forwarded to a **central backend server**, where logs are stored, analyzed, and visualized on a dashboard.
+
+> ⚡ In short: **The Pi acts as a smart IoT-IDS node**, while the Flask backend forms the **central Network-IDS server** — together forming a **Hybrid IDS ecosystem**.
 ---
 
 ## 🗂 Project Structure
@@ -147,17 +150,27 @@ Backend runs at → http://localhost:5000
 
 ## 👥 Team Roles
 
-- Backend Developer & Testing (Me 😉) → Flask + SQLite APIs, attack simulation
-- Infra & IDS Lead → Raspberry Pi setup, Suricata setup on Pi
-- Frontend Developer → Dashboard (consume /alerts)
+- Backend Developer & Testing (Me 😉) → Flask + SQLite APIs, alert integration and attack simulation
+- Infra & IDS Lead → Raspberry Pi setup, Suricata setup on Pi and hardware deployment
+- Frontend Developer → Dashboard for real-time alert visualization
+- Documentation & Testing Support → Reports, screenshots, and verification
 
 ## 📌 Roadmap
+
+<h3> ✅ Current Phase — Network IDS + IoT Integration </h3>
 
 - ✅ Backend setup (Flask + SQLite)
 - ✅ Alert ingestion pipeline
 - [ ] Frontend dashboard UI
 - [ ] Raspberry Pi integration with Suricata
 <!-- [] Advanced ML-based detection -->
+- [ ] Forwarding via REST API
+
+## 🔄 Upcoming — Hybrid IDS Phase
+
+- Multiple Raspberry Pi nodes acting as distributed IoT sensors
+- Central dashboard with Pi-node health & alert analytics
+- Secure communication (MQTT-based transmission)
 
 This project is licensed under the [MIT License](https://github.com/Drag0nSlay/Intrusion-Detection-System?tab=MIT-1-ov-file).
 <p align="center">💡 Built with teamwork, cybersecurity passion, and lots of ☕</p> ```
