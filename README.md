@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/Screenshots/banner.png" alt="IDS Banner" width="800" height=400/>
+  <img src="docs/Screenshots/Hybrid_IDS.png" alt="IDS Banner" width="800" height=800/>
 </p>
 
 <h1 align="center">🛡️ Hybrid Intrusion Detection System (H-IDS)</h1>
