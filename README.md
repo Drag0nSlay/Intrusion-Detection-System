@@ -56,33 +56,35 @@ Detected alerts are securely forwarded to a **central backend server**, where lo
 ```
 IDS/
 │
-├── Backend/
-│   ├── app.py
-│   ├── database.py
-│   ├── requirements.txt
+├── backend/
+│   ├── app.py                  # Flask/FastAPI alert ingestion + APIs
+│   ├── database.py             # SQLite / PostgreSQL handler
 │   ├── alerts.db
-│   └── __init__.py              # (optional, for package)
+│   ├── requirements.txt
+│   └── __init__.py
 │
-├── suricata-pi/                 # IDS side (Pi par run hoga)
-│   ├── forwarder.py             # Script: eve.json → Flask ingest API
-│   └── local.rules              # Custom Suricata rules
+├── ids-engine/
+│   ├── suricata.yaml           # Suricata config (software mode)
+│   ├── local.rules             # Custom detection rules
+│   ├── eve_forwarder.py        # Reads eve.json & sends to backend
+│   └── eve.json                # Generated alerts (runtime)
 │
-├── frontend/                    # (optional may be we use react)
+├── frontend/                   # Optional but GOOD for marks
 │   ├── index.html
 │   ├── static/
-│   └── script.js            # Fetch alerts from API
+│   └── script.js
+│
+├── attack-simulation/          # Testing environment
+│   ├── nmap_scan.sh
+│   ├── brute_force.py
+│   └── arp_spoof.sh
 │
 ├── docs/
 │   ├── Report.docx
 │   ├── Report.pdf
 │   └── Screenshots/
-│       ├── alert_ping.png
-│       └── nmap_detected.png
-│
-├── demo-attacks/                # Kali Linux side scripts (testing only)
-│   ├── nmap_scan.sh
-│   ├── brute_force.py
-│   └── arp_spoof.sh
+│       ├── nmap_detected.png
+│       ├── brute_force_alert.png
 │
 └── README.md
 ```
