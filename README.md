@@ -38,7 +38,6 @@
 - [API Endpoints](#-api-endpoints)
 - [Demo Output](#-demo-output)
 - [Tech Stack](#-tech-stack)
-- [Team Roles](#-team-roles)
 - [Roadmap](#-roadmap)
 - [License](https://github.com/Drag0nSlay/Intrusion-Detection-System?tab=MIT-1-ov-file)
 ---
@@ -148,13 +147,6 @@ Backend runs at → http://localhost:5000
 - Suricata IDS
 - HTML / CSS / JavaScript
 - Requests (alert forwarding)
-
-## 👥 Team Roles
-
-- Backend Developer & Testing (Me 😉) → Flask + SQLite APIs, alert integration and attack simulation
-- Infra & IDS Lead → Raspberry Pi setup, Suricata setup on Pi and hardware deployment
-- Frontend Developer → Dashboard for real-time alert visualization
-- Documentation & Testing Support → Reports, screenshots, and verification
 
 ## 📌 Roadmap
 
