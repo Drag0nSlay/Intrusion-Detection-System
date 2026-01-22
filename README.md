@@ -138,7 +138,7 @@ Backend runs at → http://localhost:5000
 ---
 
 ## 📊 Demo Output
-<p align="center"> <img src="docs/Screenshots/demo-dashboard.png" alt="Dashboard Example" width="700"/> </p>
+<p align="center"> <img src="docs/Screenshots/file_0000000015b07209a64417eece06ea10.png" alt="Dashboard Example" width="700"/> </p>
 
 ## 🛠 Tech Stack
 - Python 3.12
