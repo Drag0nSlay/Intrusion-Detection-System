@@ -2,15 +2,15 @@
   <img src="docs/Screenshots/Hybrid_IDS.png" alt="IDS Banner" width="800" height=800/>
 </p>
 
-<h1 align="center">🛡️ Hybrid Intrusion Detection System (H-IDS)</h1>
+<h1 align="center">🛡️ Software-based Intrusion Detection System (IDS)</h1>
 
 <p align="center">
   <img src="docs/Screenshots/logo.png" alt="IDS Logo" width="120"/>
 </p>
 
 <p align="center">
-  <b>Raspberry Pi–based Hybrid Intrusion Detection System for IoT & Network Environments</b>  
-  <br/>A collaborative project by 4 team members  
+  <b> Fully Software-Based Intrusion Detection System for Network Security  </b>
+  <br/>  Developed & maintained independently
 </p>
 
 ---
@@ -44,12 +44,11 @@
 ---
 
 ## 🚀 Overview
-This project implements a **Hybrid Intrusion Detection System (H-IDS)** that combines **IoT-based hardware detection (Raspberry Pi)** and **software-based network monitoring (Flask + SQLite backend)**.
+This project implements a **fully software-based Intrusion Detection System (IDS)** designed to monitor, detect, and log malicious network activities in real time.
 
-The Raspberry Pi runs **Suricata IDS**, acting as a **lightweight IoT security node** that monitors local network traffic and detects potential intrusions in real time.  
-Detected alerts are securely forwarded to a **central backend server**, where logs are stored, analyzed, and visualized on a dashboard.
+The system uses **Suricata IDS** as the detection engine and a **Flask-based backend** to ingest, store, and expose security alerts through REST APIs. A lightweight frontend dashboard enables visualization of detected intrusions..
 
-> ⚡ In short: **The Pi acts as a smart IoT-IDS node**, while the Flask backend forms the **central Network-IDS server** — together forming a **Hybrid IDS ecosystem**.
+> ⚡ In short: Suricata analyzes network traffic, while the backend processes and stores alerts, forming a modular, scalable, and hardware-independent IDS pipeline suitable for academic, research, and SOC-style environments.
 ---
 
 ## 🗂 Project Structure
@@ -147,8 +146,8 @@ Backend runs at → http://localhost:5000
 - Flask 2.3.3
 - SQLite
 - Suricata IDS
-- Raspberry Pi 3 or 4
-- Requests (for alert forwarding)
+- HTML / CSS / JavaScript
+- Requests (alert forwarding)
 
 ## 👥 Team Roles
 
@@ -159,20 +158,20 @@ Backend runs at → http://localhost:5000
 
 ## 📌 Roadmap
 
-<h3> ✅ Current Phase — Network IDS + IoT Integration </h3>
+<h3> ✅ Current Features — Network IDS </h3>
 
-- ✅ Backend setup (Flask + SQLite)
-- ✅ Alert ingestion pipeline
-- [ ] Frontend dashboard UI
-- [ ] Raspberry Pi integration with Suricata
-<!-- [] Advanced ML-based detection -->
-- [ ] Forwarding via REST API
+- Software-based Suricata IDS
+- Real-time alert ingestion via REST API
+- SQLite-based alert storage
+- Attack simulation and validation
+- Basic web dashboard
 
-## 🔄 Upcoming — Hybrid IDS Phase
-
-- Multiple Raspberry Pi nodes acting as distributed IoT sensors
-- Central dashboard with Pi-node health & alert analytics
-- Secure communication (MQTT-based transmission)
+## 🔄 Future Enhancements
+- Advanced dashboard analytics
+- Multiple IDS instances reporting to a central server
+- Secure alert transport (TLS / message queue)
+- SIEM / ELK stack integration
+- Rule management via web interface
 
 This project is licensed under the [MIT License](https://github.com/Drag0nSlay/Intrusion-Detection-System?tab=MIT-1-ov-file).
-<p align="center">💡 Built with teamwork, cybersecurity passion, and lots of ☕</p> ```
+<p align="center">💡 💡 Built independently with a strong focus on cybersecurity, detection engineering, real-world IDS workflows and lots of ☕</p> ```
