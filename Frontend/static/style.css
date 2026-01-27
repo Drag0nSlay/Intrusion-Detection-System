@@ -22,7 +22,6 @@ body {
     color: var(--text);
 }
 
-/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,7 +41,6 @@ nav h1 {
     font-size: 14px;
 }
 
-/* OVERVIEW */
 .overview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -70,7 +68,6 @@ nav h1 {
     color: var(--red);
 }
 
-/* ALERT TABLE */
 .alerts {
     padding: 0 30px 30px;
 }
@@ -112,7 +109,6 @@ tr:hover {
 .sev-medium { color: var(--yellow); }
 .sev-high { color: var(--red); font-weight: bold; }
 
-/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
@@ -137,7 +133,6 @@ tr:hover {
     border-radius: 10px;
 }
 
-/* MITRE */
 .mitre {
     margin: 0 30px 30px;
 }
@@ -153,7 +148,6 @@ tr:hover {
     text-align: center;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 12px;
