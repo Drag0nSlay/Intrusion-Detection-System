@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IDS | Security Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<nav>
+    <h1>🛡 Intrusion Detection System</h1>
+    <span class="status">● Live Monitoring</span>
+</nav>
+
+<section class="overview">
+    <div class="box">
+        <p>Total Alerts</p>
+        <h2 id="total-alerts">0</h2>
+    </div>
+    <div class="box high">
+        <p>High Severity</p>
+        <h2 id="critical-alerts">0</h2>
+    </div>
+    <div class="box">
+        <p>Engine</p>
+        <h2>Suricata</h2>
+    </div>
+</section>
+
+<section class="alerts">
+    <h2>Recent Intrusion Alerts</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Source IP</th>
+                    <th>Destination IP</th>
+                    <th>Protocol</th>
+                    <th>Signature</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody id="alerts-table"></tbody>
+        </table>
+    </div>
+</section>
+
+<section class="grid">
+    <div class="panel">
+        <h3>Alert Severity Distribution</h3>
+        <canvas id="severityChart"></canvas>
+    </div>
+
+    <div class="panel">
+        <h3>Attacker Geo-Location</h3>
+        <div id="map"></div>
+    </div>
+</section>
+
+<section class="panel mitre">
+    <h3>MITRE ATT&CK Mapping</h3>
+    <table class="mitre-table">
+        <thead>
+            <tr>
+                <th>Alert Signature</th>
+                <th>Technique ID</th>
+                <th>Tactic</th>
+            </tr>
+        </thead>
+        <tbody id="mitre-body"></tbody>
+    </table>
+</section>
+
+<footer>
+    IDS Dashboard • Suricata + Flask • Cybersecurity Project
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
