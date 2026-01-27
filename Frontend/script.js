@@ -1,10 +1,8 @@
 const API = "http://localhost:5000/alerts";
 
-/* ---------------- MAP ---------------- */
 const map = L.map("map").setView([20, 0], 2);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-/* ---------------- CHART ---------------- */
 const ctx = document.getElementById("severityChart");
 const severityChart = new Chart(ctx, {
     type: "doughnut",
@@ -23,7 +21,6 @@ const severityChart = new Chart(ctx, {
     }
 });
 
-/* ---------------- MITRE STATIC MAP ---------------- */
 const MITRE_MAP = {
     "NMAP Scan Detected": ["T1046", "Discovery"],
     "Brute Force Login": ["T1110", "Credential Access"],
@@ -66,7 +63,6 @@ async function loadAlerts() {
             </tr>
         `;
 
-        /* Demo geo markers */
         const lat = (Math.random() * 140) - 70;
         const lon = (Math.random() * 360) - 180;
         L.circleMarker([lat, lon], { radius: 5 }).addTo(map);
